@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 0,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 335.0, 99.0, 706.0, 685.0 ],
+		"rect" : [ 817.0, 127.0, 706.0, 685.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,13 +39,24 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 72.0, 480.0, 76.0, 22.0 ],
+					"text" : "mc.round~ 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-9",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 30.0, 216.0, 120.0, 35.0 ],
+					"patching_rect" : [ 30.0, 216.0, 163.0, 22.0 ],
 					"text" : "routepass multichannelsignal"
 				}
 
@@ -54,12 +65,12 @@
 				"box" : 				{
 					"fontsize" : 11.0,
 					"id" : "obj-30",
-					"linecount" : 14,
+					"linecount" : 15,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 300.0, 473.0, 405.0, 179.0 ],
-					"text" : "Copyright (C) 2018 Timo Hoogland\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <https://www.gnu.org/licenses/>.",
+					"patching_rect" : [ 300.0, 473.0, 405.0, 191.0 ],
+					"text" : "th.mcToMatrix~\nCopyright (C) 2018 Timo Hoogland\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License\nalong with this program.  If not, see <https://www.gnu.org/licenses/>.",
 					"textcolor" : [ 0.0, 0.0, 0.0, 0.5 ]
 				}
 
@@ -139,7 +150,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 165.0, 229.0, 22.0, 22.0 ],
+					"patching_rect" : [ 206.5, 216.0, 22.0, 22.0 ],
 					"text" : "t b"
 				}
 
@@ -151,7 +162,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 180.0, 301.0, 45.0, 22.0 ],
+					"patching_rect" : [ 135.0, 311.0, 45.0, 22.0 ],
 					"text" : "dim $1"
 				}
 
@@ -163,7 +174,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 180.0, 330.0, 165.0, 22.0 ],
+					"patching_rect" : [ 135.0, 340.0, 165.0, 22.0 ],
 					"text" : "jit.matrix #1 1 float32 1"
 				}
 
@@ -216,7 +227,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "float", "int", "int" ],
-					"patching_rect" : [ 165.0, 199.0, 61.0, 22.0 ],
+					"patching_rect" : [ 206.5, 180.0, 61.0, 22.0 ],
 					"text" : "dspstate~"
 				}
 
@@ -228,7 +239,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 165.0, 270.0, 106.0, 22.0 ],
+					"patching_rect" : [ 106.0, 270.0, 106.0, 22.0 ],
 					"text" : "mc.channelcount~"
 				}
 
@@ -240,7 +251,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 106.0, 365.0, 137.0, 22.0 ],
+					"patching_rect" : [ 106.0, 375.0, 137.0, 22.0 ],
 					"text" : "t i i"
 				}
 
@@ -249,11 +260,11 @@
 				"box" : 				{
 					"id" : "obj-117",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 30.0, 575.0, 92.0, 22.0 ],
-					"text" : "mc.mixdown~ 1"
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 30.0, 585.0, 58.0, 22.0 ],
+					"text" : "mc.sum~"
 				}
 
 			}
@@ -264,7 +275,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 30.0, 545.0, 61.0, 22.0 ],
+					"patching_rect" : [ 30.0, 550.0, 61.0, 22.0 ],
 					"text" : "mc.*~"
 				}
 
@@ -276,7 +287,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 72.0, 500.0, 49.0, 22.0 ],
+					"patching_rect" : [ 72.0, 520.0, 49.0, 22.0 ],
 					"text" : "mc.==~"
 				}
 
@@ -288,7 +299,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 151.0, 440.0, 92.0, 22.0 ],
+					"patching_rect" : [ 151.0, 480.0, 92.0, 22.0 ],
 					"text" : "count~ 0 32 1 1"
 				}
 
@@ -300,7 +311,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 106.0, 397.0, 72.0, 22.0 ],
+					"patching_rect" : [ 106.0, 407.0, 72.0, 22.0 ],
 					"text" : "spread 0 $1"
 				}
 
@@ -312,7 +323,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 72.0, 440.0, 50.0, 22.0 ],
+					"patching_rect" : [ 72.0, 450.0, 50.0, 22.0 ],
 					"text" : "mc.sig~"
 				}
 
@@ -345,7 +356,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-111", 0 ],
+					"destination" : [ "obj-15", 0 ],
 					"source" : [ "obj-107", 0 ]
 				}
 
@@ -360,7 +371,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-111", 1 ],
-					"midpoints" : [ 160.5, 476.0, 111.5, 476.0 ],
 					"order" : 0,
 					"source" : [ "obj-110", 0 ]
 				}
@@ -369,7 +379,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-48", 1 ],
-					"midpoints" : [ 160.5, 612.5, 83.0, 612.5 ],
+					"midpoints" : [ 160.5, 616.5, 83.0, 616.5 ],
 					"order" : 1,
 					"source" : [ "obj-110", 0 ]
 				}
@@ -393,6 +403,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-48", 0 ],
 					"source" : [ "obj-117", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-111", 0 ],
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
@@ -429,7 +446,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-109", 0 ],
-					"midpoints" : [ 115.5, 385.0, 115.5, 385.0 ],
+					"midpoints" : [ 115.5, 395.0, 115.5, 395.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
