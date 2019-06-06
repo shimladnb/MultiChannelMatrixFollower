@@ -82,8 +82,40 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "cleanSubPatcher",
-						"boxes" : [  ],
-						"lines" : [  ],
+						"visible" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 240.0, 180.0, 56.0, 22.0 ],
+									"text" : "text HEY"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 225.0, 240.0, 118.0, 22.0 ],
+									"text" : "jit.gl.text3d speakers"
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+ ],
 						"styles" : [ 							{
 								"name" : "AudioStatus_Menu",
 								"default" : 								{
@@ -3625,7 +3657,7 @@
 						"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 525.0, 240.0, 91.0, 22.0 ],
+					"patching_rect" : [ 495.0, 345.0, 91.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"accentcolor" : [ 0.518893, 0.518878, 0.518887, 1.0 ],
 						"bgcolor" : [ 1.0, 0.999974, 0.999991, 1.0 ],
@@ -3834,7 +3866,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 615.0, 45.0, 60.0, 22.0 ],
+					"patching_rect" : [ 1080.0, 330.0, 60.0, 22.0 ],
 					"text" : "r prebang"
 				}
 
@@ -3847,7 +3879,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 495.0, 45.0, 111.0, 22.0 ],
+					"patching_rect" : [ 960.0, 330.0, 111.0, 22.0 ],
 					"text" : "jit.matrix fromAudio"
 				}
 
@@ -3861,7 +3893,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1290.0, 120.0, 134.0, 22.0 ],
+					"patching_rect" : [ 660.0, 150.0, 134.0, 22.0 ],
 					"text" : "Artnet Config",
 					"texton" : "Artnet Config",
 					"textoncolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ]
@@ -4023,7 +4055,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 70.0, 47.0, 62.0, 37.0 ],
-									"save" : [ "#N", "thispatcher", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
+									"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "nogrow", "close", "nozoom", "float", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 1106, 81, 1401, 321, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
 									"text" : "thispatcher"
 								}
 
@@ -8901,7 +8933,7 @@
 						"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 1200.0, 120.0, 77.0, 22.0 ],
+					"patching_rect" : [ 570.0, 150.0, 77.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"accentcolor" : [ 0.518893, 0.518878, 0.518887, 1.0 ],
 						"bgcolor" : [ 1.0, 0.999974, 0.999991, 1.0 ],
@@ -20692,7 +20724,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1200.0, 75.0, 50.0, 22.0 ]
+					"patching_rect" : [ 570.0, 105.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -20704,7 +20736,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1200.0, 45.0, 130.0, 22.0 ],
+					"patching_rect" : [ 570.0, 75.0, 130.0, 22.0 ],
 					"text" : "r currentChannelCount"
 				}
 
@@ -32271,7 +32303,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 1125.0, 75.0, 60.0, 135.0 ],
+					"patching_rect" : [ 495.0, 105.0, 60.0, 135.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_shortname" : "live.gain~",
@@ -32294,7 +32326,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1125.0, 225.0, 51.0, 22.0 ],
+					"patching_rect" : [ 495.0, 255.0, 51.0, 22.0 ],
 					"text" : "dac~"
 				}
 
@@ -35950,7 +35982,7 @@
 						"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 1125.0, 45.0, 60.0, 22.0 ],
+					"patching_rect" : [ 495.0, 75.0, 60.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"accentcolor" : [ 0.518893, 0.518878, 0.518887, 1.0 ],
 						"bgcolor" : [ 1.0, 0.999974, 0.999991, 1.0 ],
@@ -43418,7 +43450,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1290.0, 165.0, 134.0, 22.0 ],
+					"patching_rect" : [ 660.0, 195.0, 134.0, 22.0 ],
 					"text" : "Audio Router",
 					"texton" : "Audio Router",
 					"textoncolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ]
@@ -55998,7 +56030,7 @@
 						"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 1200.0, 165.0, 84.0, 22.0 ],
+					"patching_rect" : [ 570.0, 195.0, 84.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"accentcolor" : [ 0.518893, 0.518878, 0.518887, 1.0 ],
 						"bgcolor" : [ 1.0, 0.999974, 0.999991, 1.0 ],
